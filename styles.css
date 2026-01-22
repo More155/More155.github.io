@@ -208,6 +208,8 @@ section {
 .devicon-html5-plain { color: #e34f26; }
 .devicon-css3-plain { color: #1572b6; }
 .devicon-sass-original { color: #cc6699; }
+.devicon-typescript-plain {color: #3178C6; }
+
 
 .devicon-bootstrap-plain { color: #7952b3; }
 .devicon-tailwindcss-original { color: #38bdf8; }
@@ -244,6 +246,7 @@ section {
 
 .header-content p {
   color: #666;
+  margin: 0;
 }
 
 .projects-grid {
@@ -263,6 +266,7 @@ section {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -270,37 +274,36 @@ section {
   box-shadow: 0 24px 60px rgba(192, 116, 154, 0.28);
 }
 
-.project-image {
-  height: 180px;
-  overflow: hidden;
-}
-
-.project-image img {
+.project-card > img {
   width: 100%;
-  height: 100%;
+  height: 180px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.project-card:hover img {
+.project-card:hover > img {
   transform: scale(1.08);
 }
 
-.project-content {
+.project-info {
   padding: 1.6rem 1.8rem 2rem;
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 1rem;
-  height: 100%;
 }
 
-.project-content h3 {
+.project-info h3,
+.project-info p {
   margin: 0;
+}
+
+.project-info h3 {
   font-size: 1.3rem;
   color: #3550ff;
 }
 
-.project-content p {
+.project-info p {
   color: #444;
   line-height: 1.55;
   font-size: 0.95rem;
@@ -312,7 +315,7 @@ section {
   gap: 0.5rem;
 }
 
-.tech {
+.tech-stack span {
   font-size: 0.75rem;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
@@ -322,17 +325,21 @@ section {
   transition: all 0.25s ease;
 }
 
-.tech:hover {
+.tech-stack span:hover {
   background: #3550ff;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(53, 80, 255, 0.25);
 }
 
-.btng {
+.project-info a {
   margin-top: auto;
   align-self: flex-start;
+  text-decoration: none;
+  font-weight: 600;
+  color: #3550ff;
 }
+
 
 /* Contact Me */ 
 
