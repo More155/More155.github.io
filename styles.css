@@ -8,3 +8,7 @@ body {
 #about strong {
   color: #6366f1;
   }
+
+html {
+  scroll-behavior: smooth;
+}

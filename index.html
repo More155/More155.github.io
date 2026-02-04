@@ -2,15 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Morena | Frontend Developer</title>
+  <title>Morena | Fullstack Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+<div
+  id="projectModal"
+  class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none flex items-center justify-center z-50 transition-opacity duration-500"
+>
+  <div
+    id="modalContent"
+    class="bg-white rounded-xl p-6 max-w-lg w-full relative transform scale-95 transition-transform duration-500"
+  >
+    <button
+      id="closeModal"
+      class="absolute top-3 right-4 text-gray-400 text-xl hover:text-gray-700"
+    >
+      &times;
+    </button>
+
+    <p
+      id="modalText"
+      class="text-gray-700 leading-relaxed text-base"
+    ></p>
+  </div>
+</div>
 
 <body class="font-sans antialiased">
 
@@ -28,7 +49,7 @@
           Skills
         </a>
         <a href="#projects" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
-          Projects
+          Pet projects
         </a>
         <a href="#contact" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
           Contact 💌
@@ -67,7 +88,7 @@
   <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
     <h3 class="text-2xl md:text-3xl font-light text-gray-600 mb-4">Hello,</h3>
     <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-4">I'm Morena</h1>
-    <h2 class="text-3xl md:text-5xl font-medium text-indigo-600 mb-10">Frontend Developer</h2>
+    <h2 class="text-3xl md:text-5xl font-medium text-indigo-600 mb-10">Fullstack Developer</h2>
     <a href="./assets/CV-Morena-Nicora.pdf" target="_blank" class="inline-block px-8 py-4 bg-indigo-600 text-white font-medium rounded-full shadow-lg hover:bg-indigo-700 transition-colors">
       Download CV
     </a>
@@ -78,20 +99,26 @@
       <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-center">About Me</h2>
       <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
         <p>
-          Hi 👋🏻 I’m <strong>Morena Nicora</strong>, a <strong>Frontend Developer</strong> who enjoys creating
+          Hi 👋🏻 I’m <strong>Morena Nicora</strong>, a <strong>Fullstack Developer</strong> who enjoys creating
           <strong>interactive</strong> and <strong>visually appealing</strong> web applications.
           I like working on projects that challenge my <strong>logic</strong> and <strong>creativity</strong>,
           from small utilities to complete applications.
         </p>
         <p>
           I’m especially interested in <strong>JavaScript</strong> and <strong>React</strong>, and I enjoy learning
-          by building <strong>real projects</strong>.
+          by building
+            <a
+           href="#projects"
+           class="font-semibold text-indigo-600 hover:text-blue-600 underline underline-offset-4 transition"
+        >
+          real projects
+        </a>.
           I also have a growing interest in <strong>cybersecurity</strong>, focusing on
           <strong>web security fundamentals</strong> and <strong>best practices</strong>.
         </p>
         <p>
           My goal is to continue growing as a <strong>developer</strong>, strengthen my
-          <strong>problem-solving skills</strong>,
+          <strong>problem-solving skills</strong>, incorporate <strong>new technologies</strong>,
           and expand my knowledge toward <strong>full-stack development</strong> and
           <strong>secure application design</strong>.
         </p>
@@ -270,7 +297,7 @@
   <section id="projects" class="py-16 px-6 md:px-12 lg:px-20">
     <header class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-        Projects
+        Pet projects
       </h2>
       <p class="text-lg text-gray-600 max-w-2xl mx-auto">
         Here are some of my favorite projects that showcase my skills and creativity.
@@ -296,6 +323,11 @@
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
           </div>
+            <button
+       class="text-sm text-gray-500 hover:text-indigo-600 transition mb-3 self-start"
+      data-project="guess-the-word">
+      More info →
+      </button>
           <a
             href="https://guessthewordjs.netlify.app/"
             target="_blank"
@@ -326,6 +358,11 @@
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
           </div>
+      <button
+       class="text-sm text-gray-500 hover:text-indigo-600 transition mb-3 self-start"
+      data-project="solitaire">
+      More info →
+      </button>
           <a
             href="https://klondikesolitairejquery.netlify.app/"
             target="_blank"
@@ -356,7 +393,11 @@
       <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Vite</span>
       <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Firebase</span>
     </div>
-
+      <button
+       class="text-sm text-gray-500 hover:text-indigo-600 transition mb-3 self-start"
+      data-project="hangman">
+      More info →
+      </button>
     <a
       href="https://hangman-multiplayer-9219c.web.app/"
       target="_blank"
@@ -366,35 +407,6 @@
     </a>
   </div>
 </article>
-
-
-      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
-        <img
-          src="./img/Calculator.png"
-          alt="Calculator"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-6 flex flex-col flex-1">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">
-            Calculator
-          </h3>
-          <p class="text-gray-600 mb-4 flex-1">
-            Simple but cute pastel color calculator built with JavaScript.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JavaScript</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
-            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
-          </div>
-          <a
-            href="https://github.com/More155/Calculator"
-            target="_blank"
-            class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
-          >
-            View on GitHub →
-          </a>
-        </div>
-      </article>
 
       <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
         <img
@@ -415,8 +427,41 @@
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
             <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
           </div>
+          <button
+       class="text-sm text-gray-500 hover:text-indigo-600 transition mb-3 self-start"
+      data-project="tracker">
+      More info →
+      </button>
           <a
             href="https://github.com/More155/Income-ExpenseTracker"
+            target="_blank"
+            class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
+          >
+            View on GitHub →
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow xl flex flex-col">
+        <img
+          src="./img/Calculator.png"
+          alt="Calculator"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Calculator
+          </h3>
+          <p class="text-gray-600 mb-4 flex-1">
+            Simple but cute pastel color calculator built with JavaScript.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
+          </div>
+          <a
+            href="https://github.com/More155/Calculator"
             target="_blank"
             class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
           >
@@ -482,48 +527,8 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      emailjs.init("1SqMn5fAHhkJK4Dvo");
-    })();
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      emailjs.sendForm("service_wba1j98", "template_si14m9k", this)
-        .then(() => {
-          Swal.fire({
-            icon: "success",
-            title: "Message sent!",
-            text: "Thank you for reaching out 💙",
-            confirmButtonColor: "#3550ff"
-          });
-          this.reset();
-        })
-        .catch(() => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong.",
-            confirmButtonColor: "#3550ff"
-          });
-        });
-    });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="./main.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-  </script>
 </body>
 </html>

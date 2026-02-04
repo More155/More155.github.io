@@ -1,0 +1,119 @@
+[
+  {
+    "id": "solitaire",
+    "title": "Klondike Solitaire",
+    "sections": [
+      {
+        "heading": "Purpose",
+        "items": [
+          "Practice game logic",
+          "Strengthen DOM manipulation skills",
+          "Work with jQuery UI drag & drop"
+        ]
+      },
+      {
+        "heading": "Current Features",
+        "items": [
+          "Classic Klondike setup (7 columns, stock, waste, foundations)",
+          "Drag & drop cards between columns and foundations",
+          "Automatic win detection",
+          "Timer",
+          "Undo button",
+          "Win alert using SweetAlert with restart option"
+        ]
+      },
+      {
+        "heading": "Planned Improvements",
+        "items": [
+          "Add 3-card draw mode for the stock pile"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hangman",
+    "title": "Hangman Game",
+    "sections": [
+      {
+        "heading": "Multiplayer Mode",
+        "items": [
+          "Two players join the same room",
+          "Players take turns choosing words and guessing",
+          "Real-time updates using Firebase Firestore",
+          "Keyboard disabled for the player who is not guessing",
+          "End message displaying the correct word when a player loses",
+          "Leave Room button to exit and reset the game"
+        ]
+      },
+      {
+        "heading": "Solo Mode",
+        "items": [
+          "Play alone with a predefined word list",
+          "Same rules and mechanics as multiplayer mode"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tracker",
+    "title": "Income & Expense Tracker",
+    "subtitle": "Personal finance tracker",
+    "description": "A simple, clean, and fully functional personal finance tracker built with vanilla JavaScript.",
+    "sections": [
+      {
+        "heading": "Initial Version",
+        "items": [
+          "Runs entirely in the browser",
+          "No server or database required"
+        ]
+      },
+      {
+        "heading": "Features",
+        "items": [
+          "Add incomes and expenses with description, amount, and predefined categories",
+          "13 expense categories and 5 income categories",
+          "Real-time calculation of total incomes, expenses, and balance",
+          "Donut chart showing expenses by category",
+          "Soft pastel placeholder state when no expenses are present",
+          "Recent transactions list with delete option",
+          "Data persistence using localStorage",
+          "Clean, responsive, mobile-friendly design with pastel color palette"
+        ]
+      }
+    ]
+  },
+
+  {
+  "id": "guess-the-word",
+  "title": "Guess the Word",
+  "sections": [
+    {
+      "heading": "Gameplay Rules",
+      "items": [
+        "The player must guess a total of 10 words to win the game",
+        "The game allows a maximum of 6 tries before losing",
+        "Each guess can contain up to 3 incorrect letters",
+        "Reaching 3 incorrect letters in a single guess counts as 1 try",
+        "Reaching 6 tries results in a game over"
+      ]
+    },
+    {
+      "heading": "Controls & Interactions",
+      "items": [
+        "All gameplay can be controlled using the keyboard",
+        "Letters are typed directly using the keyboard",
+        "Press Enter to submit a word"
+      ]
+    },
+    {
+      "heading": "Game Actions",
+      "items": [
+        "Random button to change the current word",
+        "Reset button to restart the entire game",
+        "Clue button with up to 3 available hints per game"
+      ]
+    }
+  ]
+}
+
+]
