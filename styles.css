@@ -1,0 +1,10 @@
+body {
+  background-image: url('https://img.freepik.com/free-vector/gradient-blur-pink-blue-abstract-background_53876-117324.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: cover;        
+  background-repeat: no-repeat;     
+  background-position: center;      
+  background-attachment: fixed;   
+}
+#about strong {
+  color: #6366f1;
+  }

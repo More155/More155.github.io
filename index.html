@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Morena | Frontend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans antialiased">
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#home" class="text-2xl font-bold text-indigo-600">
+        Portfolio
+      </a>
+
+      <div class="hidden md:flex md:items-center md:gap-8">
+        <a href="#about" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          About Me
+        </a>
+        <a href="#skills" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          Skills
+        </a>
+        <a href="#projects" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          Projects
+        </a>
+        <a href="#contact" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          Contact 💌
+        </a>
+      </div>
+
+      <button 
+        id="menu-toggle" 
+        class="md:hidden text-gray-700 focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden bg-white shadow-lg">
+      <div class="px-4 py-6 flex flex-col gap-5">
+        <a href="#about" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          About Me
+        </a>
+        <a href="#skills" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          Skills
+        </a>
+        <a href="#projects" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          Projects
+        </a>
+        <a href="#contact" class="font-medium text-gray-700 hover:text-indigo-600 transition-colors">
+          Contact 💌
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <h3 class="text-2xl md:text-3xl font-light text-gray-600 mb-4">Hello,</h3>
+    <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-4">I'm Morena</h1>
+    <h2 class="text-3xl md:text-5xl font-medium text-indigo-600 mb-10">Frontend Developer</h2>
+    <a href="./assets/CV-Morena-Nicora.pdf" target="_blank" class="inline-block px-8 py-4 bg-indigo-600 text-white font-medium rounded-full shadow-lg hover:bg-indigo-700 transition-colors">
+      Download CV
+    </a>
+  </section>
+
+  <section id="about" class="py-20 px-6 md:px-12 lg:px-20">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-10 text-center">About Me</h2>
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+        <p>
+          Hi 👋🏻 I’m <strong>Morena Nicora</strong>, a <strong>Frontend Developer</strong> who enjoys creating
+          <strong>interactive</strong> and <strong>visually appealing</strong> web applications.
+          I like working on projects that challenge my <strong>logic</strong> and <strong>creativity</strong>,
+          from small utilities to complete applications.
+        </p>
+        <p>
+          I’m especially interested in <strong>JavaScript</strong> and <strong>React</strong>, and I enjoy learning
+          by building <strong>real projects</strong>.
+          I also have a growing interest in <strong>cybersecurity</strong>, focusing on
+          <strong>web security fundamentals</strong> and <strong>best practices</strong>.
+        </p>
+        <p>
+          My goal is to continue growing as a <strong>developer</strong>, strengthen my
+          <strong>problem-solving skills</strong>,
+          and expand my knowledge toward <strong>full-stack development</strong> and
+          <strong>secure application design</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="py-16 px-6 md:px-12 lg:px-20">
+    <header class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        My Skills
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Technologies, tools, and fundamentals I use and continue learning as a developer.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 auto-rows-fr">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base md:text-lg font-normal text-gray-600 mb-14 text-center uppercase tracking-wider">
+            Programming Languages
+          </h3>
+          <div class="grid grid-cols-2 gap-6 flex-1 items-start justify-items-center">
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-javascript-plain text-6xl mb-4" style="color: #f7df1e;"></i>
+              <span class="text-sm font-medium text-gray-700">JavaScript (ES6+)</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-python-plain text-6xl mb-4" style="color: #3776ab;"></i>
+              <span class="text-sm font-medium text-gray-700">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base md:text-lg font-normal text-gray-600 mb-14 text-center uppercase tracking-wider">
+            Frontend Technologies
+          </h3>
+          <div class="grid grid-cols-2 gap-6 flex-1 items-start justify-items-center">
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-html5-plain text-6xl mb-4" style="color: #e34f26;"></i>
+              <span class="text-sm font-medium text-gray-700">HTML5</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-css3-plain text-6xl mb-4" style="color: #1572b6;"></i>
+              <span class="text-sm font-medium text-gray-700">CSS3</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-sass-original text-6xl mb-4" style="color: #cc6699;"></i>
+              <span class="text-sm font-medium text-gray-700">SASS</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-react-original text-6xl mb-4" style="color: #61dafb;"></i>
+              <span class="text-sm font-medium text-gray-700">React</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 col-span-2 md:col-span-1">
+              <i class="devicon-typescript-plain text-6xl mb-4" style="color: #3178C6;"></i>
+              <span class="text-sm font-medium text-gray-700">TypeScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base md:text-lg font-normal text-gray-600 mb-14 text-center uppercase tracking-wider">
+            Frameworks & Libraries
+          </h3>
+          <div class="grid grid-cols-2 gap-6 flex-1 items-start justify-items-center">
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-bootstrap-plain text-6xl mb-4" style="color: #7952b3;"></i>
+              <span class="text-sm font-medium text-gray-700">Bootstrap</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-tailwindcss-original text-6xl mb-4" style="color: #38bdf8;"></i>
+              <span class="text-sm font-medium text-gray-700">Tailwind CSS</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-jquery-plain text-6xl mb-4" style="color: #0769ad;"></i>
+              <span class="text-sm font-medium text-gray-700">jQuery</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-jest-plain text-6xl mb-4" style="color: #c21325;"></i>
+              <span class="text-sm font-medium text-gray-700">Jest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base md:text-lg font-normal text-gray-600 mb-14 text-center uppercase tracking-wider">
+            Tools & Platforms
+          </h3>
+          <div class="grid grid-cols-2 gap-6 flex-1 items-start justify-items-center">
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-git-plain text-6xl mb-4" style="color: #f05032;"></i>
+              <span class="text-sm font-medium text-gray-700">Git</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-github-original text-6xl mb-4" style="color: #000000;"></i>
+              <span class="text-sm font-medium text-gray-700">GitHub</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-linux-plain text-6xl mb-4" style="color: #fcc624;"></i>
+              <span class="text-sm font-medium text-gray-700">Linux</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-postman-plain text-6xl mb-4" style="color: #ff6c37;"></i>
+              <span class="text-sm font-medium text-gray-700">Postman</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 col-span-2 md:col-span-1">
+              <i class="devicon-nodejs-plain text-6xl mb-4" style="color: #339933;"></i>
+              <span class="text-sm font-medium text-gray-700">Node.js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base md:text-lg font-normal text-gray-600 mb-14 text-center uppercase tracking-wider">
+            Cybersecurity
+          </h3>
+          <div class="grid grid-cols-2 gap-6 flex-1 items-start justify-items-center">
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="fa-solid fa-shield-halved text-6xl mb-4" style="color: #4f46e5;"></i>
+              <span class="text-sm font-medium text-gray-700">CyberSec FND</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="fa-solid fa-user-secret text-6xl mb-4" style="color: #111827;"></i>
+              <span class="text-sm font-medium text-gray-700">Ethical Hacking Basics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-base md:text-lg font-normal text-gray-600 mb-14 text-center uppercase tracking-wider">
+            Databases & Cloud
+          </h3>
+          <div class="grid grid-cols-2 gap-6 flex-1 items-start justify-items-center">
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-mongodb-plain text-6xl mb-4" style="color: #47a248;"></i>
+              <span class="text-sm font-medium text-gray-700">MongoDB Atlas</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110">
+              <i class="devicon-firebase-plain text-6xl mb-4" style="color: #ffca28;"></i>
+              <span class="text-sm font-medium text-gray-700">Firebase</span>
+            </div>
+            <div class="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110 col-span-2 md:col-span-1">
+              <svg
+                class="w-16 h-16 mb-4 text-[#0055A4]"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <span class="text-sm font-medium text-gray-700">Cisco Packet Tracer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-16 px-6 md:px-12 lg:px-20">
+    <header class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Projects
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Here are some of my favorite projects that showcase my skills and creativity.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <img
+          src="./img/Guess-The-Word.png"
+          alt="Guess The Word"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Guess The Word
+          </h3>
+          <p class="text-gray-600 mb-4 flex-1">
+            Word guessing game with hints and limited attempts.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
+          </div>
+          <a
+            href="https://guessthewordjs.netlify.app/"
+            target="_blank"
+            class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
+          >
+            Play the game →
+          </a>
+        </div>
+      </article>
+
+
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <img
+          src="./img/Solitaire.png"
+          alt="Solitaire"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Klondike Solitaire
+          </h3>
+          <p class="text-gray-600 mb-4 flex-1">
+            Classic solitaire with drag & drop.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-pink-100 text-pink-800 text-sm rounded-full">jQuery</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
+          </div>
+          <a
+            href="https://klondlikesolitaire.netlify.app/"
+            target="_blank"
+            class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
+          >
+            Play the game →
+          </a>
+        </div>
+      </article>
+      
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+  <img
+    src="./img/Hangman.png"
+    alt="Hangman Game"
+    class="w-full h-48 object-cover"
+  />
+  <div class="p-6 flex flex-col flex-1">
+    <h3 class="text-xl font-semibold text-gray-900 mb-2">
+      Hangman Game 
+    </h3>
+    <p class="text-gray-600 mb-4 flex-1">
+    Hangman game with a 2 player option built with frontend tools and real-time backend.
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-sm rounded-full">React</span>
+      <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">TypeScript</span>
+      <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Vite</span>
+      <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">Firebase</span>
+    </div>
+
+    <a
+      href="https://hangman-multiplayer-9219c.web.app/"
+      target="_blank"
+      class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
+    >
+      Play the game →
+    </a>
+  </div>
+</article>
+
+
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <img
+          src="./img/Calculator.png"
+          alt="Calculator"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Calculator
+          </h3>
+          <p class="text-gray-600 mb-4 flex-1">
+            Simple but cute pastel color calculator built with JavaScript.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
+          </div>
+          <a
+            href="https://github.com/More155/Calculator"
+            target="_blank"
+            class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
+          >
+            View on GitHub →
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <img
+          src="./img/Tracker.png"
+          alt="Tracker"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Income-Expense Tracker
+          </h3>
+          <p class="text-gray-600 mb-4 flex-1">
+            A personal finance tracker with charts.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Chart.js</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
+          </div>
+          <a
+            href="https://github.com/More155/Income-ExpenseTracker"
+            target="_blank"
+            class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
+          >
+            View on GitHub →
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
+        <img
+          src="./img/Domain-Generator.png"
+          alt="Domain Generator"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Domain Generator
+          </h3>
+          <p class="text-gray-600 mb-4 flex-1">
+            Dynamic domain name generator.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">JavaScript</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">HTML</span>
+            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">CSS</span>
+          </div>
+          <a
+            href="https://github.com/4GeeksAcademy/More155-DomainGenerator"
+            target="_blank"
+            class="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-auto"
+          >
+            View on GitHub →
+          </a>
+        </div>
+      </article>
+
+      
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 px-6 md:px-12 lg:px-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-10">Wanna get in touch?</h1>
+      <form id="contact-form" class="space-y-6">
+        <input type="text" name="user_name" placeholder="Your name" required class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <input type="email" name="user_email" placeholder="Your email" required class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <textarea name="message" placeholder="Your message" required rows="6" class="w-full px-5 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+        <button type="submit" class="w-full md:w-auto px-10 py-4 bg-indigo-600 text-white font-medium rounded-full shadow-lg hover:bg-indigo-700 transition-colors">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center">
+    <div class="flex justify-center gap-8">
+      <a href="https://www.linkedin.com/in/morenanicora/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/145/145807.png" alt="LinkedIn" class="w-10 h-10 hover:opacity-80 transition-opacity">
+      </a>
+      <a href="https://github.com/More155" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/128/733/733553.png" alt="GitHub" class="w-10 h-10 hover:opacity-80 transition-opacity">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      emailjs.init("1SqMn5fAHhkJK4Dvo");
+    })();
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      emailjs.sendForm("service_wba1j98", "template_si14m9k", this)
+        .then(() => {
+          Swal.fire({
+            icon: "success",
+            title: "Message sent!",
+            text: "Thank you for reaching out 💙",
+            confirmButtonColor: "#3550ff"
+          });
+          this.reset();
+        })
+        .catch(() => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong.",
+            confirmButtonColor: "#3550ff"
+          });
+        });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
