@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+
   const modal = document.getElementById("projectModal");
   const modalContent = document.getElementById("modalContent");
   const modalText = document.getElementById("modalText");
@@ -42,7 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderProject(project) {
+
     let html = `
+
+      <div class="
+         max-h-[85vh] overflow-y-auto
+         p-6
+         transform scale-95
+         transition-transform duration-300"> <div/>
+
       <h2 class="text-2xl font-semibold text-indigo-600 mb-1">
         ${project.title}
       </h2>
