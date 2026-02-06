@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  emailjs.init("1SqMn5fAHhkJK4Dvo");
+  emailjs.init("xgV4cJyJJoBigJ8Ls");
 
   const contactForm = document.getElementById("contact-form");
 
