@@ -114,6 +114,39 @@
       ]
     }
   ]
+},
+{
+  "id": "msn-chat",
+  "title": "Windows Live Messenger Chat",
+  "sections": [
+    {
+      "heading": "Messaging Rules",
+      "items": [
+        "Users can send and receive real-time messages using WebSockets",
+        "Only the last 20 messages are stored in the chat window",
+        "A sound notification plays when receiving a message from another user"
+      ]
+    },
+    {
+      "heading": "User Interface",
+      "items": [
+        "Messages are visually separated between sent and received messages",
+        "Chat automatically scrolls to the newest message"
+      ]
+    },
+    {
+      "heading": "Controls & Interactions",
+      "items": [
+        "Users type messages in the input field",
+        "Press Enter to send a message",
+        "Click Send button to submit a message",
+        "Emoji button toggles the emoji picker",
+        "Clicking an emoji adds it to the message input"
+      ]
+    }
+  ]
 }
-
 ]
+
+
+
