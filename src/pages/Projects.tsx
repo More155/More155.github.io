@@ -37,6 +37,7 @@ export default function Projects() {
             <li>Auth0 authentication with email/password and Google OAuth</li>
             <li>Online / Offline detection with custom status (Away, Busy, BRB)</li>
             <li>Status synced to DB and broadcast to contacts in real time</li>
+            <li>End-to-end encrypted messages (AES-256)</li>
           </ul>
 
           <h4 className="font-semibold text-gray-800">UI / UX</h4>
