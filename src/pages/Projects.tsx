@@ -117,6 +117,15 @@ export default function Projects() {
               >
                 feelapp.onrender.com
               </a>
+              {" "}•{" "}
+              <a
+                href="https://github.com/4GeeksAcademy/feelApp-lt67"
+                target="_blank"
+                rel="noreferrer"
+                className="text-indigo-600 hover:underline"
+              >
+                github.com/4GeeksAcademy/feelApp-lt67
+              </a>
             </p>
           </div>
         </PetProjectCard>
