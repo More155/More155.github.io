@@ -5,9 +5,8 @@ interface PetProjectCardProps {
   subtitle?: string;
   description?: string;
   imageSrc?: string;
-  techTags?: string[]; 
-  children?: React.ReactNode; 
-  projectLink?: string; 
+  techTags?: string[];
+  children?: React.ReactNode;
 }
 
 export const PetProjectCard: React.FC<PetProjectCardProps> = ({
@@ -17,10 +16,9 @@ export const PetProjectCard: React.FC<PetProjectCardProps> = ({
   imageSrc,
   techTags = [],
   children,
-  projectLink,
 }) => {
   return (
-    <article className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col md:flex-row">
+    <article className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col md:flex-row m-5">
       {imageSrc && (
         <img
           src={imageSrc}
@@ -30,9 +28,17 @@ export const PetProjectCard: React.FC<PetProjectCardProps> = ({
       )}
 
       <div className="p-6 flex flex-col flex-1">
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
-        {subtitle && <p className="text-gray-600 mb-2">{subtitle}</p>}
-        {description && <p className="text-gray-600 mb-4">{description}</p>}
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+          {title}
+        </h3>
+
+        {subtitle && (
+          <p className="text-gray-600 mb-2">{subtitle}</p>
+        )}
+
+        {description && (
+          <p className="text-gray-600 mb-4">{description}</p>
+        )}
 
         <div className="flex flex-wrap gap-2 mb-4">
           {techTags.map((tag) => (
@@ -45,17 +51,7 @@ export const PetProjectCard: React.FC<PetProjectCardProps> = ({
           ))}
         </div>
 
-        {children}
-
-        {projectLink && (
-          <a
-            href={projectLink}
-            target="_blank"
-            className="inline-block text-blue-600 hover:text-blue-800 font-medium transition-colors mt-4"
-          >
-            Try it →
-          </a>
-        )}
+        <div className="flex-1">{children}</div>
       </div>
     </article>
   );

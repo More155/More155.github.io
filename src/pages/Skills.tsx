@@ -51,6 +51,7 @@ const skillsData: SkillCategory[] = [
       { name: "Node.js", iconClass: "devicon-nodejs-plain", color: "#339933" },
       { name: "Express", iconClass: "devicon-express-original" },
       { name: "Firebase", iconClass: "devicon-firebase-plain", color: "#ffca28" },
+      { name: "PostgreSQL", iconClass: "devicon-postgresql-plain", color: "#4169e1" },
     ],
   },
   {
@@ -60,6 +61,7 @@ const skillsData: SkillCategory[] = [
       { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-original", color: "#38bdf8" },
       { name: "jQuery", iconClass: "devicon-jquery-plain", color: "#0769ad" },
       { name: "Jest", iconClass: "devicon-jest-plain", color: "#c21325" },
+      { name: "Flask", iconClass: "devicon-flask-original", color: "#000000" },
     ],
   },
   {

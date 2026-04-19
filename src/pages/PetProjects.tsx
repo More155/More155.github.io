@@ -1,9 +1,9 @@
 import React from "react";
-import { PetProjectCard } from "../components/PetProjectsCard"
-import guesstheword from "../assets/img/Guess-The-Word.png"
-import solitaire from "../assets/img/Solitaire.png"
-import tracker from "../assets/img/Tracker.png"           
-import hangmanImg from "../assets/img/Hangman.png"
+import { PetProjectCard } from "../components/PetProjectsCard";
+import guesstheword from "../assets/img/Guess-The-Word.png";
+import solitaire from "../assets/img/Solitaire.png";
+import tracker from "../assets/img/Tracker.png";
+import hangmanImg from "../assets/img/Hangman.png";
 
 export const PetProjects: React.FC = () => {
   return (
@@ -18,13 +18,11 @@ export const PetProjects: React.FC = () => {
       </header>
 
       <div className="flex flex-col gap-8">
-        {/* Guess The Word */}
         <PetProjectCard
           title="Guess The Word"
           description="Word guessing game with hints and limited attempts."
           imageSrc={guesstheword}
           techTags={["JavaScript", "HTML", "CSS"]}
-          projectLink="https://guessthewordjs.netlify.app/"
         >
           <h4 className="font-semibold text-gray-800">Gameplay Rules</h4>
           <ul className="list-disc list-inside text-gray-600 mb-2">
@@ -34,27 +32,40 @@ export const PetProjects: React.FC = () => {
             <li>Reaching 3 incorrect letters in a single guess counts as 1 try</li>
             <li>Reaching 6 tries results in a game over</li>
           </ul>
+
           <h4 className="font-semibold text-gray-800">Controls & Interactions</h4>
           <ul className="list-disc list-inside text-gray-600 mb-2">
             <li>All gameplay can be controlled using the keyboard</li>
             <li>Letters are typed directly using the keyboard</li>
             <li>Press Enter to submit a word</li>
           </ul>
+
           <h4 className="font-semibold text-gray-800">Game Actions</h4>
           <ul className="list-disc list-inside text-gray-600">
             <li>Random button to change the current word</li>
             <li>Reset button to restart the entire game</li>
             <li>Clue button with up to 3 available hints per game</li>
           </ul>
+
+          <div className="mt-4 text-sm text-gray-500">
+            <p>
+              Live:
+              <a
+                href="https://guessthewordjs.netlify.app/"
+                target="_blank"
+                className="ml-2 text-indigo-600 hover:underline"
+              >
+                guessthewordjs.netlify.app
+              </a>
+            </p>
+          </div>
         </PetProjectCard>
 
-        {/* Klondike Solitaire */}
         <PetProjectCard
           title="Klondike Solitaire"
           description="Classic solitaire with drag & drop."
           imageSrc={solitaire}
           techTags={["JavaScript", "jQuery", "HTML", "CSS"]}
-          projectLink="https://klondikesolitairejquery.netlify.app/"
         >
           <h4 className="font-semibold text-gray-800">Purpose</h4>
           <ul className="list-disc list-inside text-gray-600 mb-2">
@@ -77,15 +88,34 @@ export const PetProjects: React.FC = () => {
           <ul className="list-disc list-inside text-gray-600">
             <li>Add 3-card draw mode for the stock pile</li>
           </ul>
+
+          <div className="mt-4 text-sm text-gray-500">
+            <p>
+              Live:
+              <a
+                href="https://klondikesolitairejquery.netlify.app/"
+                target="_blank"
+                className="ml-2 text-indigo-600 hover:underline"
+              >
+                klondikesolitairejquery.netlify.app
+              </a>
+              {" "}•{" "}
+              <a
+                href="https://github.com/More155/Solitaire"
+                target="_blank"
+                className="text-indigo-600 hover:underline"
+              >
+                github.com/More155/Solitaire
+              </a>
+            </p>
+          </div>
         </PetProjectCard>
 
-        {/* Hangman Game */}
         <PetProjectCard
           title="Hangman Game"
           description="Hangman game with a 2 player option built with frontend tools and real-time backend."
           imageSrc={hangmanImg}
           techTags={["React", "TypeScript", "Vite", "Firebase"]}
-          projectLink="https://hangman-multiplayer-9219c.web.app/"
         >
           <h4 className="font-semibold text-gray-800">Multiplayer Mode</h4>
           <ul className="list-disc list-inside text-gray-600 mb-2">
@@ -102,16 +132,27 @@ export const PetProjects: React.FC = () => {
             <li>Play alone with a predefined word list</li>
             <li>Same rules and mechanics as multiplayer mode</li>
           </ul>
+
+          <div className="mt-4 text-sm text-gray-500">
+            <p>
+              Live:
+              <a
+                href="https://hangman-multiplayer-9219c.web.app/"
+                target="_blank"
+                className="ml-2 text-indigo-600 hover:underline"
+              >
+                hangman-multiplayer-9219c.web.app
+              </a>
+            </p>
+          </div>
         </PetProjectCard>
 
-        {/* Income-Expense Tracker */}
         <PetProjectCard
           title="Income & Expense Tracker"
           subtitle="Personal finance tracker"
           description="A simple, clean, and fully functional personal finance tracker built with vanilla JavaScript."
           imageSrc={tracker}
           techTags={["JavaScript", "Chart.js", "HTML", "CSS"]}
-          projectLink="https://income-expense-tracker-doughnut.netlify.app/"
         >
           <h4 className="font-semibold text-gray-800">Initial Version</h4>
           <ul className="list-disc list-inside text-gray-600 mb-2">
@@ -130,6 +171,27 @@ export const PetProjects: React.FC = () => {
             <li>Data persistence using localStorage</li>
             <li>Clean, responsive, mobile-friendly design with pastel color palette</li>
           </ul>
+
+          <div className="mt-4 text-sm text-gray-500">
+            <p>
+              Live:
+              <a
+                href="https://income-expense-tracker-doughnut.netlify.app/"
+                target="_blank"
+                className="ml-2 text-indigo-600 hover:underline"
+              >
+                income-expense-tracker-doughnut.netlify.app
+              </a>
+              {" "}•{" "}
+              <a
+                href="https://github.com/More155/Income-ExpenseTracker"
+                target="_blank"
+                className="text-indigo-600 hover:underline"
+              >
+                github.com/More155/Income-ExpenseTracker
+              </a>
+            </p>
+          </div>
         </PetProjectCard>
       </div>
     </section>

@@ -3,11 +3,12 @@ import type { JSX } from "react"
 import logo from "../favicon.png"
 import { Link, useLocation } from "react-router-dom"
 
-type SectionId = "home" | "about" | "skills" | "projects" | "contact" | "pet-projects"
+type SectionId = "home" | "about" | "skills"  | "selected-work" | "projects" | "contact" | "pet-projects"
 
 const sections: { id: SectionId; label: string }[] = [
   { id: "about", label: "About Me" },
   { id: "skills", label: "Skills" },
+  { id: "selected-work", label: "Selected Work" },
   { id: "pet-projects", label: "Pet Projects" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact 💌" },
